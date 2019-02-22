@@ -3,9 +3,11 @@ var y = 200;
 var h = 200;
 var w = 200;
 
-var raio = 100;
+var raio = 80;
 
-var cont = 1
+var numHora = 3
+
+var raioNum = 50;
 
 
 function setup() {
@@ -15,10 +17,6 @@ function setup() {
 }
 
 function draw() {
-	
-	
-	
-	
   background(220);
 	noFill();
 	stroke(4);
@@ -47,9 +45,18 @@ function draw() {
     var x2 = cos(radians(angulo)) * raio;
     var y2 = sin(radians(angulo)) * raio;
 
+  
     
     // corrige (x2,y2) para (x+cx,y+cy)
-    text('12', x - 10, (y / 2) + 20);
+    text(numHora, x2 + (x / 2) + 95, y2 + (y / 2) + 105);
+    noFill();
+    noLoop();
+    if(numHora < 12){
+    	numHora++;
+    }
+    else{
+    	numHora = 1;
+    }
   }
 	
 
